@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "notafiscal",
-    "slug": "notafiscal",
+    "slug": "nt-fiscal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,17 +13,33 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Precisamos da câmera para escanear notas fiscais.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar a galeria para escolher fotos de notas fiscais."
+      }
     },
     "android": {
+      "package": "com.teorodrigues.notafiscal",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#6C63FF"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d7a97078-82a1-46fa-89b2-1ea95c525bc5"
+      }
+    },
+    "owner": "theorodriguess-organization"
   }
 }
